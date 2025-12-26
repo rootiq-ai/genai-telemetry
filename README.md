@@ -24,7 +24,7 @@ pip install genai-telemetry
 ## Architecture
 <img width="465" height="493" alt="image" src="https://github.com/user-attachments/assets/f6dc9a3d-89b6-4484-a9b9-76198c044ecb" />
 
-```
+
 ## Quick Start
 
 ### Basic Usage with Console Output
