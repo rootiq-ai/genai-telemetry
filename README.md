@@ -20,10 +20,11 @@ Trace AI workloads and export telemetry to any backend, including Splunk, Elasti
 ```bash
 pip install genai-telemetry
 
-# For AWS CloudWatch support
-pip install genai-telemetry[aws]
 ```
+## Architecture
+<img width="465" height="493" alt="image" src="https://github.com/user-attachments/assets/f6dc9a3d-89b6-4484-a9b9-76198c044ecb" />
 
+```
 ## Quick Start
 
 ### Basic Usage with Console Output
