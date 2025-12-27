@@ -23,7 +23,7 @@ AWS CloudWatch, and more.
 
 ## Production Use: Splunk App
 
-genai-telemetry is used as the telemetry SDK powering a published Splunk app https://splunkbase.splunk.com/app/2779 
+genai-telemetry is used as the telemetry SDK powering a published Splunk app (https://splunkbase.splunk.com/app/8308)
 for monitoring Generative AI workloads.
 The SDK sends GenAI telemetry directly to Splunk via the HTTP Event Collector (HEC),
 enabling production-grade ingestion without intermediate collectors.
