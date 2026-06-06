@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genai-telemetry"
+dynamic = ["version"]
+description = "Platform-agnostic observability SDK for GenAI/LLM applications — trace LLMs, RAG, agents, and tools to Splunk, Elasticsearch, OpenTelemetry, Datadog, and more."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Kamal Singh Bisht" }]
+keywords = ["genai", "llm", "observability", "telemetry", "tracing", "opentelemetry", "splunk", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Monitoring",
+]
+dependencies = []  # base SDK is pure standard-library
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+anthropic = ["anthropic>=0.25"]
+google = ["google-generativeai>=0.5"]
+langchain = ["langchain>=0.1", "langchain-core>=0.1"]
+llamaindex = ["llama-index>=0.10"]
+all = [
+    "openai>=1.0",
+    "anthropic>=0.25",
+    "google-generativeai>=0.5",
+    "langchain>=0.1",
+    "langchain-core>=0.1",
+    "llama-index>=0.10",
+]
+dev = ["pytest>=7", "build>=1.0", "twine>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/genai-telemetry/genai-telemetry"
+Repository = "https://github.com/genai-telemetry/genai-telemetry"
+Changelog = "https://github.com/genai-telemetry/genai-telemetry/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { attr = "genai_telemetry.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["genai_telemetry*"]
+
+[tool.setuptools.package-data]
+genai_telemetry = ["py.typed"]

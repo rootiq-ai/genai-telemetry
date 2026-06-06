@@ -3,6 +3,20 @@ All notable changes to the genai-telemetry SDK will be documented in this file.
 The format is based on Keep a Changelog,
 and this project adheres to Semantic Versioning.
 
+## Version 1.2.0 - 2026-06-06
+
+### Added
+- **OpenTelemetry export example** (`examples/otel_rag_example.py`) — instrumented
+  RAG pipeline (embedding → retrieval → LLM) exporting via the OTLP exporter to an
+  OpenTelemetry Collector, which can forward to Splunk or any OTel backend.
+- **Packaging** (`pyproject.toml`) — the SDK is now pip-installable and publishable
+  to PyPI. Base install is dependency-free (pure standard library); framework
+  support is available via optional extras:
+  `genai-telemetry[openai]`, `[anthropic]`, `[google]`, `[langchain]`,
+  `[llamaindex]`, `[all]`, `[dev]`.
+- **CI release workflow** (`.github/workflows/release.yml`) — builds and publishes
+  to PyPI automatically on GitHub Release via Trusted Publishing.
+
 ## Version 1.1.0 - 2026-02-07
 
 ### Added - Auto-Instrumentation (Major Feature)
